@@ -1,0 +1,172 @@
+<header class="mag-header">
+  <div class="mag-header-logo"></div>
+  <h1>Hello</h1>
+  <ul class="mag-header-menu">
+    <li><a href="#" class="active">One</a></li>
+    <li><a href="#">Twoo</a></li>
+    <li><a href="#">Three</a></li>
+    <li><a href="#">Four</a></li>
+  </ul>
+
+  <ul class="mag-header-menu mag-header-menu-right">
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Register</a></li>
+  </ul>
+</header>
+<div class="mag-col-cont">
+
+  <div class="mag-vertical-bar mag-vertical-bar-240">
+    <ul class="mag-vertical-bar-menu">
+      <li><a href="#">One</a></li>
+      <li><a href="#" class="active">Two</a></li>
+      <li><a href="#">Three</a></li>
+      <li><a href="#">Four</a></li>
+    </ul>
+  </div>
+
+  <div class="mag-content">
+    <div class="tiles">
+      <div class="tile tile-1">
+        <div class="tile-header">Big tile example</div>
+        <div class="tile-content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="tile-footer">end of tile</div>
+      </div>
+      <div class="tile tile-2">
+        <div class="tile-header">Unordered list</div>
+        <div class="tile-content">
+          <ul class="list">
+            <li>elem</li>
+            <li>elem</li>
+            <li>elem</li>
+            <li>elem</li>
+            <li>elem</li>
+            <li>elem</li>
+          </ul>
+        </div>
+        <div class="tile-footer">end of tile</div>
+      </div>
+      <div class="tile tile-2">
+        <div class="tile-header">Form</div>
+        <div class="tile-content">
+          <div class="form">
+            <div class="form-group">
+              <div class="form-label">Name</div>
+              <div class="form-value">
+                <input type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label">Surname</div>
+              <div class="form-value">
+                <input type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label">Phone</div>
+              <div class="form-value">
+                <input type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile-footer">
+          <input type="submit" class="btn">
+          <input type="reset" class="btn btn-danger">
+        </div>
+      </div>
+
+
+
+      <div class="tile tile-1">
+        <div class="tile-header">Table</div>
+        <div class="tile-content">
+          <table class="table table-big">
+            <thead>
+              <tr>
+                <th>one</th>
+                <th>two</th>
+                <th>three</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>example</td>
+                <td>example</td>
+                <td>example</td>
+              </tr>
+              <tr>
+                <td>example</td>
+                <td>example</td>
+                <td>example</td>
+              </tr>
+              <tr>
+                <td>example</td>
+                <td>example</td>
+                <td>example</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tile-footer">end of tile</div>
+      </div>
+
+      <div class="tile tile-3">
+        <div class="tile-header">Selectable list</div>
+        <div class="tile-content">
+          <ul class="selectable-list">
+            <li
+              *ngFor="let elem of toggleListElems;let i = index"
+              [class.active]="elem.isActivated"
+              [class.selected]="i==toggleListActive"
+              (click)="toggleListActive=i"
+            >
+              {{elem.name}}
+            </li>
+          </ul>
+        </div>
+        <div class="tile-footer">end of tile</div>
+      </div>
+      <div class="tile tile-3">
+        <div class="tile-header">Toggle list</div>
+        <div class="tile-content">
+          <div class="toggle-list" >
+            <div *ngFor="let elem of toggleListElems;let i = index" class="toggle" [class.active] = "i==toggleListActive" >
+              <div class="toggle-name" (click)="toggleListActive=i">
+                <div class="elem-80" >{{elem.name}}</div>
+                <div class="elem-stretch" >{{elem.surname}}</div>
+                <div class="elem-80">:)</div>
+              </div>
+              <div class="toggle-content">
+                {{elem.content}}
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tile-footer">end of tile</div>
+      </div>
+
+        <div class="tile tile-3">
+          <div class="tile-header">Buttons example</div>
+          <div class="tile-content">
+            <button class="btn">default</button>
+            <button class="btn btn-success">success</button>
+            <button class="btn btn-warning">warning</button>
+            <button class="btn btn-danger">danger</button>
+          </div>
+          <div class="tile-footer">end of tile</div>
+        </div>
+
+
+    </div>
+
+  </div>
+
+</div>

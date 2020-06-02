@@ -1,0 +1,35 @@
+.tiles{
+	display: flex;
+	width: 100%;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items:flex-start;
+}
+
+.tile{
+	box-shadow: 1px 1px 3px 0 @shadow-collor;
+	flex-grow: 1;
+	margin-bottom: 10px;
+	&.tile-1{
+		flex-basis: 100%;
+	}
+	&.tile-2{
+		flex-basis: 40%;
+		max-width: calc(50% - 6px);
+	}
+	&.tile-3{
+		flex-basis: 30%;
+		max-width: calc(33.33% - 6px);
+	}
+	.tile-header{
+		padding: 15px;
+		box-shadow: 0 1px 1px 0 lighten(@shadow-collor,60%);
+	}
+	.tile-content{
+		padding: 15px;
+	}
+	.tile-footer{
+		padding: 15px;
+		box-shadow: 0 -1px 1px 0 lighten(@shadow-collor,60%);
+	}
+}

@@ -1,0 +1,51 @@
+.fade{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+  overflow: scroll;
+  z-index: 10000;
+  &.fade-primary{
+    z-index: 10001;
+  }
+}
+
+.window{
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 300px);
+  width: 600px;
+  .window-header{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    background-color: @primary-color;
+    color: @text-on-dark;
+    font-size: 18px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .window-body{
+    background-color: #fff;
+    padding: 20px;
+
+  }
+  .window-footer{
+    height: 50px;
+    line-height: 50px;
+    padding:0 20px;
+    background-color: white;
+    color: @primary-color;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top: 1px solid @primary-color;
+  }
+
+}
+
+//для контролов angular-material
+.cdk-overlay-container{
+  z-index: 10002 !important;
+}

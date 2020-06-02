@@ -1,0 +1,31 @@
+.table-big{
+  min-width: 100%;
+}
+.table{
+  border-spacing: 0;
+  text-align: center;
+
+  tr:first-child{
+    th{
+      background-color: @primary-color;
+      color: white;
+    }
+  }
+
+  th{
+    letter-spacing: 0.07em;
+  }
+  th,td{
+    font-weight: normal;
+    height: 30px;
+    vertical-align: middle;
+    padding: 5px;
+    font-size: 13px;
+  }
+  tbody{
+    tr:nth-child(even){
+      background-color: @gray-color;
+    }
+  }
+
+}

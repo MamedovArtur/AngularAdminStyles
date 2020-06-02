@@ -1,0 +1,51 @@
+
+@header-pad-size: @header-height/4;
+@header-line-size: @header-height/2;
+
+.mag-header{
+	height: @header-height;
+	background: linear-gradient(135deg,darken(@primary-color,12%) 30%,@primary-color 32%);
+	display: flex;
+	align-items: center;
+	padding: 0 @header-pad-size;
+	.mag-header-logo{
+		width: @header-line-size;
+		height: @header-line-size;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.mag-header-menu{
+		list-style-type: none;
+		display: flex;
+		height: @header-line-size;
+		padding: 0 @header-pad-size;
+
+		&.mag-header-menu-right{
+			position: absolute;
+			right: 0;
+		}
+
+		li{
+			a{
+				line-height: @header-line-size;
+				text-decoration: none;
+				color: @text-on-dark;
+				display: block;
+				padding:0 @header-pad-size;
+				&:hover{
+					background-color:@accent-color;
+				}
+				&.active{
+					background-color:@accent-color;
+				}
+			}
+		}
+	}
+	h1{
+		line-height: @header-height;
+		color: @text-on-dark;
+		padding: 0 @header-pad-size;
+	}
+}
+

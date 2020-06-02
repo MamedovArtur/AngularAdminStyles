@@ -1,0 +1,103 @@
+.list{
+	padding:0 20px;
+	list-style-type: none;
+	&>li{
+		line-height:1.8em;
+		&::before{
+			content:"";
+			display: inline-block;
+			vertical-align:middle;
+			border-radius:50%;
+			width: 0.8em;
+			height: 0.8em;
+			background-color: @primary-color;
+			margin-right: 10px;
+		}
+	}
+}
+
+.selectable-list {
+  list-style-type: none;
+
+  li {
+    padding: 10px;
+    box-shadow: 0 2px 1px -1px @gray-color;
+    cursor: pointer;
+    position: relative;
+
+    &.selected {
+      background-color: @primary-color;
+      color: white;
+    }
+
+    &.active::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 10px;
+      bottom: 0;
+      top: 1px;
+      background: @accent-color;
+    }
+  }
+}
+
+
+
+
+.toggle-list {
+  &.toggle-table {
+    .toggle-header {
+      display: flex;
+      background-color: @primary-color;
+      color: white;
+      margin-bottom: 3px;
+
+      .elem-stretch, .first {
+        flex-grow: 1;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .toggle {
+    .toggle-name {
+      border: 1px solid @primary-color;
+      color: @primary-color;
+      display: flex;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 10px;
+      cursor: pointer;
+      .elem-80 { width: 80px; flex-basis: 80px; }
+      .elem-100 { width: 100px; flex-basis: 100px; }
+      .elem-150 { width: 150px; flex-basis: 150px; }
+      .elem-200 { width: 200px; flex-basis: 200px; }
+      .elem-250 { width: 250px;flex-basis: 250px; }
+      .elem-stretch {flex-grow: 1;text-align: center;}
+    }
+    &:not(:last-of-type){
+      .toggle-name{
+        border-bottom: none;
+      }
+    }
+
+    .toggle-content {
+      display: none;
+    }
+
+    &.active {
+      .toggle-name {
+        background: @primary-color;
+        color: white;
+      }
+
+      .toggle-content {
+        display: block;
+        padding: 10px;
+      }
+    }
+  }
+}

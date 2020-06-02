@@ -1,0 +1,141 @@
+.mag-col-cont {
+  min-height: calc(100vh - @header-height);
+  position: relative;
+  display: table;
+  width: 100%;
+
+  .mag-content {
+    display: table-cell;
+  }
+}
+
+.mag-vertical-bar {
+  display: table-cell;
+  background-color: @bars-color-dark;
+  width: 100%;
+  vertical-align: top;
+
+  &.mag-vertical-bar-200 {
+    width: 200px;
+  }
+
+  &.mag-vertical-bar-220 {
+    width: 220px;
+  }
+
+  &.mag-vertical-bar-240 {
+    width: 240px;
+  }
+
+  &.mag-vertical-bar-280 {
+    width: 280px;
+  }
+
+  &.mag-vertical-bar-300 {
+    width: 300px;
+  }
+
+  .mag-vertical-bar-menu {
+    list-style-type: none;
+
+    li {
+      padding-bottom: 1px;
+
+      a {
+        height: 40px;
+        line-height: 40px;
+        color: @text-on-dark;
+        text-decoration: none;
+        display: block;
+        padding: 0 10px;
+        background-color: darken(@bars-color-dark, 10%);
+        position: relative;
+
+        &:hover {
+          background-color: darken(@primary-color, 20%);
+        }
+
+        &.active {
+          background-color: darken(@primary-color, 20%);
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 20px solid transparent;
+            border-top: 20px solid transparent;
+            border-right: 10px solid @primary-color;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1520px) {
+  .mag-vertical-bar {
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    transition: all 1s;
+    z-index: 50;
+
+    &:hover {
+      left: 0;
+    }
+
+    &.mag-vertical-bar-200 {
+      left: -185px;
+    }
+
+    &.mag-vertical-bar-200 + .mag-content {
+      padding-left: 30px;
+    }
+
+    &.mag-vertical-bar-220 {
+      left: -105px;
+    }
+
+    &.mag-vertical-bar-220 + .mag-content {
+      padding-left: 30px;
+    }
+
+    &.mag-vertical-bar-240 {
+      left: -215px;
+    }
+
+    &.mag-vertical-bar-240 + .mag-content {
+      padding-left: 40px;
+    }
+
+    &.mag-vertical-bar-280 {
+      left: -255px;
+    }
+
+    &.mag-vertical-bar-280 + .mag-content {
+      padding-left: 40px;
+    }
+
+    &.mag-vertical-bar-280 {
+      left: -275px;
+    }
+
+    &.mag-vertical-bar-280 + .mag-content {
+      padding-left: 40px;
+    }
+  }
+
+
+}
+
+
+.mag-content {
+  padding: 10px;
+}
